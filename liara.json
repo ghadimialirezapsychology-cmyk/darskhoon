@@ -1,0 +1,11 @@
+{
+  "app": "darskhoon",
+  "port": 5000,
+  "platform": "node",
+  "disks": [
+    {
+      "name": "data",
+      "mountTo": "/app/data"
+    }
+  ]
+}
