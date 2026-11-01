@@ -1,5 +1,5 @@
-# Dockerfile for DarsKhoon Full-Stack App
-FROM node:20-alpine AS builder
+# Dockerfile for DarsKhoon Full-Stack App using Debian Slim (glibc compatible with Vite & Tailwind 4)
+FROM node:20-bookworm-slim AS builder
 
 WORKDIR /app
 
@@ -12,7 +12,7 @@ COPY . .
 RUN npm run build
 
 # Production image
-FROM node:20-alpine AS runner
+FROM node:20-bookworm-slim AS runner
 
 WORKDIR /app
 ENV NODE_ENV=production
